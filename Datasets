@@ -1,74 +1,72 @@
-VT-SSum Dataset
-Overview
-VT-SSum is a benchmark dataset created for research in video transcript segmentation and summarization. It consists of spoken language transcripts extracted from real-world videos, making it suitable for developing and evaluating models that process, segment, and summarize video transcripts.
+# VT-SSum Dataset
 
-Dataset Structure
-Total Videos:
+## Overview
 
-Train: 7,692
+**VT-SSum** is a benchmark dataset created for research in **video transcript segmentation and summarization**. It consists of spoken language transcripts extracted from real-world videos, making it suitable for developing and evaluating models that process, segment, and summarize video transcripts.
 
-Dev: 962
+## Dataset Structure
 
-Test: 962
+- **Total Videos:**
+  - **Train:** 7,692
+  - **Dev:** 962
+  - **Test:** 962
 
-Data Format:
-Each entry is a JSON object with the following fields:
+- **Data Format:**  
+  Each entry is a JSON object with the following fields:
+  - `id`: Unique video identifier
+  - `title`: Title of the video
+  - `info`: Additional video details (e.g., recording/upload time)
+  - `url`: Source link to the video
+  - `segmentation`: List of transcript segments (each segment is a list of sentences)
+  - `summarization`: Dictionary containing segment summaries and sentence-level summary annotations
 
-id: Unique video identifier
+### Example Data Instance
 
-title: Title of the video
-
-info: Additional video details (e.g., recording/upload time)
-
-url: Source link to the video
-
-segmentation: List of transcript segments (each segment is a list of sentences)
-
-summarization: Dictionary containing segment summaries and sentence-level summary annotations
-
-Example Data Instance
-json
 {
-  "id": "A01",
-  "title": "Sample Video Title",
-  "info": "Uploaded 2021-01-01",
-  "url": "https://sample.video.url",
-  "segmentation": [
-    ["Sentence 1", "Sentence 2", "..."],
-    ["Sentence 3", "Sentence 4", "..."]
-  ],
-  "summarization": {
-    "segments": [
-      {
-        "summary": "...",
-        "is_summarization_sample": true,
-        "summarization_data": [
-          {"sentence": "...", "label": 1},
-          ...
-        ]
-      }
-    ]
-  }
+"id": "A01",
+"title": "Sample Video Title",
+"info": "Uploaded 2021-01-01",
+"url": "https://sample.video.url",
+"segmentation": [
+["Sentence 1", "Sentence 2", "..."],
+["Sentence 3", "Sentence 4", "..."]
+],
+"summarization": {
+"segments": [
+{
+"summary": "...",
+"is_summarization_sample": true,
+"summarization_data": [
+{"sentence": "...", "label": 1},
+...
+]
 }
-Supported Tasks
-Transcript Segmentation: Divide long transcripts into semantically consistent segments.
+]
+}
+}
 
-Summarization: Generate coherent summaries at the segment or video level.
 
-Benchmarking: Systematic evaluation of modern language models with provided training, validation, and test splits.
 
-Data Files
-File structure:
+## Supported Tasks
 
-text
+- **Transcript Segmentation:** Divide long transcripts into semantically consistent segments.
+- **Summarization:** Generate coherent summaries at the segment or video level.
+- **Benchmarking:** Systematic evaluation of modern language models with provided training, validation, and test splits.
+
+## Data Files
+
+**File structure:**
+
 VT-SSum/
-  ├── train.json
-  ├── dev.json
-  ├── test.json
-  └── README.md
-All files are in JSON format.
+├── train.json
+├── dev.json
+├── test.json
+└── README.md
 
-Each file contains a list of video transcript entries as described above.
+- All files are in JSON format.
+- Each file contains a list of video transcript entries as described above.
 
-Languages
-The dataset is in English, covering conversational, documentary, and lecture-style spoken content.
+## Languages
+
+The dataset is in **English**, covering conversational, documentary, and lecture-style spoken content.
+
