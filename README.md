@@ -1,4 +1,4 @@
-# 📚 Abstractive Summarization of Educational Video Transcripts Using Transformer Models
+# 📚 Educational Video Transcript Summarization with Transformers
 
 _A project by Harshil Pradhan_
 
