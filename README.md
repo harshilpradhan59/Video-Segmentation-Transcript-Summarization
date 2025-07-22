@@ -1,4 +1,4 @@
-# 📚 Video Lecture Transcription Summarization using Deep Learning
+# 📚 Abstractive Summarization of Educational Video Transcripts Using Transformer Models
 
 _A project by Harshil Pradhan_
 
